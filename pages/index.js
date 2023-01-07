@@ -97,7 +97,7 @@ export default function Home({ products }) {
       <section className="text-gray-700 body-font pt-24">
         <div className="head text-center">
           <div className="text-blue-700 text-xl">Testimonials</div>
-          <h1 className="text-5xl font-bold text-gray-800 mb-6">What are Client says</h1>
+          <h1 className="text-5xl font-bold text-gray-800 mb-6">What our Clients says</h1>
           <p className="text-lg text-gray-500">
             There are many variations of passages of Lorem Ipsum available{" "}
             <br /> but the majority have suffered alteration in some form.

@@ -98,19 +98,16 @@ if(data.success){
                       <div className="col-span-3 sm:col-span-3">
                         <div>
                             <label htmlFor="name"  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Name</label>
-                      <input  type="text"  onChange={handlechange} name="name" id="product" className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Zoxie" required=""/>
+                      <input  type="text"  onChange={handlechange} name="name" id="product" className="bg-white border border-black -gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Zoxie" required=""/>
                         </div>
                       </div>
                    
 
 
-                    <div>
-                      <label htmlFor="product" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Name</label>
-                      <input handlechange type="text" onChange={handlechange} name="name" id="product" className="bg-white border border-gray-500 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Zoxie" required="" />
-                    </div>
+                    
                   </div>
 
-                </div>
+                
 
                   <label htmlFor="about" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
                   <div className="mt-1">
@@ -208,7 +205,7 @@ if(data.success){
 
                   </span>
                 </div>
-
+              </div>
 
               <div className="bg-gray-50 px-4 py-3 text-center sm:px-6">
                 <button

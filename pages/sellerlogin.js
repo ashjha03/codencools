@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const sellerlogin = () => {
+const sellerlogin = ({setUser}) => {
     const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -36,6 +36,7 @@ const sellerlogin = () => {
                 localStorage.setItem('sellertoken', JSON.stringify(json.token))
                 localStorage.setItem('selleremail', JSON.stringify(json.email))
                 localStorage.setItem('sellername', JSON.stringify(json.name))
+                setUser(true)
                 setTimeout(() => {
                     router.push('/')
                 }, 1500)

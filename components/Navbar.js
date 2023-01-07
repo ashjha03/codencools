@@ -5,9 +5,9 @@ import {
   AiOutlinePlusCircle,
 } from "react-icons/ai";
 import { BsFillCartDashFill } from "react-icons/bs";
-import Chat from "./Chat";
+// import Chat from "./Chat";
 
-function Navbar({cart, addToCart, removeFromCart}) {
+function Navbar({cart, addToCart, removeFromCart,logout,user}) {
   const toggleClick = () => {
     const myCart = document.getElementById("myCart");
     if (myCart.classList.contains("hidden")) {
@@ -20,10 +20,10 @@ function Navbar({cart, addToCart, removeFromCart}) {
   };
 
 
-  const [isBid, setisBid] = useState(false);
-  const handleIsBid = ()=>{
-    setisBid(!isBid);
-  }
+  // const [isBid, setisBid] = useState(false);
+  // const handleIsBid = ()=>{
+  //   setisBid(!isBid);
+  // }
 
 
 
@@ -38,7 +38,7 @@ function Navbar({cart, addToCart, removeFromCart}) {
             className="flex title-font font-medium items-center text-white mb-4 md:mb-0"
           >
             
-            <span className="ml-3 text-xl">QuickIT</span>
+            <span className="ml-3 text-xl">Bargain Mart</span>
           </Link>
           <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
             <Link href="/" className="mr-5 hover:text-gray-400 cursor-pointer">
@@ -61,9 +61,12 @@ function Navbar({cart, addToCart, removeFromCart}) {
             </Link>
           </nav>
 
-          <Link href='/login' className="text-white inline-flex items-center bg-gray-700 border-0 py-1 px-3 mr-4 focus:outline-none rounded text-base mt-4 md:mt-0">
+         {!user && <Link href='/login' className="text-white inline-flex items-center bg-gray-700 border-0 py-1 px-3 mr-4 focus:outline-none rounded text-base mt-4 md:mt-0">
             Login
-          </Link>
+          </Link>}
+         {user && <Link href='' className="text-white inline-flex items-center bg-gray-700 border-0 py-1 px-3 mr-4 focus:outline-none rounded text-base mt-4 md:mt-0" onClick={()=>logout()}>
+            Logout
+          </Link>}
           <Link
             href="#"
             className="flex justify-center items-center"
@@ -77,7 +80,7 @@ function Navbar({cart, addToCart, removeFromCart}) {
       </header>
       <div className="relative flex justify-end">
 
-         <Chat isBid={isBid}  setisBid={setisBid}/>
+         {/* <Chat isBid={isBid}  setisBid={setisBid}/> */}
       </div>
       <div
         id="myCart"
